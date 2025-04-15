@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Space+Grotesk:wght@300..700&display=swap');
+
+@import "tailwindcss";
+@import "tailwindcss-animated";
+
+/* Scrollbar custom */
+*::-webkit-scrollbar {
+    width: 4px;
+}
+
+*::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+    background: var(--color-gray-300);
+    border-radius: var(--radius-md);
+}
+
+@media (prefers-color-scheme: dark) {
+    *::-webkit-scrollbar-thumb {
+        background: color-mix(in oklab, var(--color-white) 5%, transparent);
+    }
+}
+
+@layer base {
+    :root {
+        --font-sans: 'Inter', ui-sans-serif, system-ui;
+        --font-display: 'Space Grotesk', sans-serif;
+        --font-mono: 'JetBrains Mono', ui-monospace;
+    }
+}
+
+@layer utilities {
+    .font-display {
+        font-family: var(--font-display);
+    }
+
+    .font-mono {
+        font-family: var(--font-mono);
+    }
+}
